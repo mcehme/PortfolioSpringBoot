@@ -1,0 +1,164 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0
+}
+#navbar {
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 99;
+}
+.nav-element {
+    background: green;
+    padding: 0 1rem 01rem;
+    border: 1px solid black;
+    z-index: 100;
+
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #25274D;
+    color: #FFFFFF;
+    height: 100vh;
+}
+.inline {
+    display: inline;
+}
+.overflow-hidden {
+    overflow-x: hidden;
+}
+h1 {
+    text-align: center;
+    margin: 10rem;
+}
+#portrait-img-holder {
+    height: 20vw;
+    width: 20vw;
+}
+.circle-img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #AAABB8;
+    color: #000000;
+    height: 100vh;
+
+}
+#about-filler {
+    background: #AAABB8;
+    height: 50vh;
+}
+
+#self-summary {
+    padding: 0rem 5rem 0 5rem;
+    width: 40%;
+}
+
+#school-logo-holder {
+    height: 30vh;
+    width: 30vh;
+    padding: 0 5rem 0 0rem;
+}
+#school-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#sporty-holder {
+    height: 40vh;
+    width: 40vh;
+    padding: 0 0 0 5rem;
+}
+#sporty {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#this {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background: #464866;
+}
+#small-block {
+    padding:  5rem 2.5rem;
+    width: 25%;
+    background: #2E9CCA;
+}
+#large-block {
+    padding: 0rem 10rem 0 2.5rem;
+    width: 75%;
+    color: white;
+}
+
+#contact-me {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+form {
+    display: grid;
+    grid-template-columns:repeat(8,6rem);
+    grid-gap: 5px;
+}
+
+form label{
+    text-align:right;
+    grid-column:1/2;
+
+}
+form label+*{
+    grid-column:2/5;
+}
+form label+textarea{
+    grid-column:2/9;
+}
+
+form button {
+    grid-column: 2/4;
+}
+
+#email-loading {
+    border: 1vh solid grey;
+    border-top: 1vh solid blue;
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/* hack for AOS */
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+
+

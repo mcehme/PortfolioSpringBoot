@@ -1,0 +1,80 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Michael Ehme</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css}"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <script type="text/javascript" th:src="@{/script.js}"></script>
+    <nav id="navbar">
+        <a class="nav-element" href="/#home">Home</a>
+        <a class="nav-element" href="/#about">About</a>
+        <a class="nav-element" href="/projects">Projects</a>
+        <a class="nav-element" href="/#resume">Resume</a>
+        <a class="nav-element" href="/#contact-me">Contact Me</a>
+    </nav>
+    <div id="home">
+        <h1 class="animate__animated animate__rubberBand inline">Introducing Michael Ehme</h1>
+        <div id="portrait-img-holder">
+            <img class="circle-img" th:src="@{/images/professional_1.jpg}"/>
+        </div>
+
+    </div>
+    <div class="overflow-hidden" id="about">
+        <div id="school-logo-holder">
+            <img data-aos="slide-right" data-aos-anchor-placement="top-center" id = "school-logo" th:src="@{/images/ksu.png}"/>
+        </div>
+
+        <p data-aos="slide-up" data-aos-anchor-placement="top-center" class="inline" id="self-summary">Fullstack engineer graduating summa cum laude with a BS in Computer Science from Kennesaw State University.
+            Looking for a fullstack or backend role. Passions (and experience) include fullstack web development and AI.
+            Hobbies include practicing Taekwondo, driving my BMW Z4, and volunteering at my local church. </p>
+        <div id="sporty-holder">
+            <img data-aos="slide-left" data-aos-anchor-placement="top-center" id="sporty" th:src="@{/images/sporty.jpg}"/>
+        </div>
+
+    </div>
+    <div id="about-filler"></div>
+    <div id="this">
+        <div data-aos="slide-down" class="inline" id="small-block" >
+            <h2 class="inline">This website is powered by SpringBoot and Thymeleaf</h2>
+        </div>
+        <div class="inline" id="large-block">
+            <p class="inline">Java Spring Boot powers the backend of the website.
+                Building http endpoints, generating responsive frontend templates, and sending emails are just a few of Spring Boots' powerful capabilities showcased here.
+                As a big fan of microservices and CI/CD, Spring Boot is one of my favorite technologies! The frontend is built using html, css, and vanilla js.
+                No frameworks were used because Spring Boot and Thymeleaf play nice with the vanilla technologies.
+            </p>
+        </div>
+    </div>
+    <div id="resume">
+        <p>click here to download my resume!</p>
+    </div>
+    <div id="contact-me">
+        <div id="email-loading" hidden>
+        </div>
+        <div>
+            <form th:action="@{/emailService}" th:object="${simpleEmail}" method="post">
+                    <label for="from">Your Email</label>
+                    <input type="email" id="from" name="from" placeholder="Your email here">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <label for="text">Body</label>
+                    <textarea name="text" id="text" cols="30" rows="10" placeholder="Email Body Here"></textarea>
+                    <button type="submit">Send Email</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+  </script>
+</body>
+</html>
