@@ -73,7 +73,7 @@ h1 {
     width: 30vh;
     padding: 0 5rem 0 0rem;
 }
-#school-logo {
+.square-contain {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -84,7 +84,7 @@ h1 {
     width: 40vh;
     padding: 0 0 0 5rem;
 }
-#sporty {
+.square-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -114,29 +114,29 @@ h1 {
     justify-content:center;
 }
 
-form {
+#contact-me form {
     display: grid;
     grid-template-columns:repeat(8,6rem);
     grid-gap: 5px;
 }
 
-form label{
+#contact-me form label{
     text-align:right;
     grid-column:1/2;
 
 }
-form label+*{
+#contact-me form label+*{
     grid-column:2/5;
 }
-form label+textarea{
+#contact-me form label+textarea{
     grid-column:2/9;
 }
 
-form button {
+#contact-me form button {
     grid-column: 2/4;
 }
 
-#email-loading {
+.loading {
     border: 1vh solid grey;
     border-top: 1vh solid blue;
     border-radius: 50%;

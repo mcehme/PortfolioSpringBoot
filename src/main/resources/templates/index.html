@@ -28,14 +28,14 @@
     </div>
     <div class="overflow-hidden" id="about">
         <div id="school-logo-holder">
-            <img data-aos="slide-right" data-aos-anchor-placement="top-center" id = "school-logo" th:src="@{/images/ksu.png}"/>
+            <img data-aos="slide-right" data-aos-anchor-placement="top-center" class="square-contain" th:src="@{/images/ksu.png}"/>
         </div>
 
         <p data-aos="slide-up" data-aos-anchor-placement="top-center" class="inline" id="self-summary">Fullstack engineer graduating summa cum laude with a BS in Computer Science from Kennesaw State University.
             Looking for a fullstack or backend role. Passions (and experience) include fullstack web development and AI.
             Hobbies include practicing Taekwondo, driving my BMW Z4, and volunteering at my local church. </p>
         <div id="sporty-holder">
-            <img data-aos="slide-left" data-aos-anchor-placement="top-center" id="sporty" th:src="@{/images/sporty.jpg}"/>
+            <img data-aos="slide-left" data-aos-anchor-placement="top-center" class="square-cover" th:src="@{/images/sporty.jpg}"/>
         </div>
 
     </div>
@@ -53,13 +53,16 @@
         </div>
     </div>
     <div id="resume">
-        <p>click here to download my resume!</p>
+        <div id="loading-download-resume" class="loading" hidden></div>
+        <form th:action="@{/downloadResume/resume.pdf}" method="get" id="download-resume" class="download">
+            <button type="submit">Download</button>
+        </form>
     </div>
     <div id="contact-me">
-        <div id="email-loading" hidden>
+        <div id="loading-email-service" class="loading" hidden>
         </div>
         <div>
-            <form th:action="@{/emailService}" th:object="${simpleEmail}" method="post">
+            <form th:action="@{/emailService}" th:object="${simpleEmail}" method="post" id="email-service">
                     <label for="from">Your Email</label>
                     <input type="email" id="from" name="from" placeholder="Your email here">
                     <label for="subject">Subject</label>

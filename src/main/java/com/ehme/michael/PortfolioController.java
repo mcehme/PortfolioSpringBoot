@@ -6,6 +6,8 @@ import com.ehme.michael.records.SimpleEmail;
 import com.ehme.michael.records.SimpleFile;
 import com.ehme.michael.repositories.ResumeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +33,9 @@ public class PortfolioController {
     @ResponseBody
     public ResponseEntity<String> emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
         try {
-            System.out.println(model);
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
+            System.out.println(e);
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
@@ -52,4 +54,9 @@ public class PortfolioController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping(value="/downloadResume/resume.pdf", produces=MediaType.APPLICATION_PDF_VALUE)
+    @ResponseBody
+    public Resource downloadResume(Model model) {
+        return new ByteArrayResource(resumeRepository.findFirstByOrderByIdDesc().getContent());
+    }
 }

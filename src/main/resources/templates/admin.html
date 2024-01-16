@@ -5,14 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
     <title>Admin</title>
 </head>
 <body>
+    <script type="text/javascript" th:src="@{/script.js}"></script>
+
     <div>
         <h1>Admin Panel</h1>
     </div>
     <div>
-        <form th:action="@{/uploadResume}" method="post" th:object=${file} enctype="multipart/form-data">
+        <div id="loading-upload-resume" class="loading" hidden></div>
+        <form th:action="@{/uploadResume}" method="post" th:object=${file} enctype="multipart/form-data" id="upload-resume">
             <label for="resume">Upload Resume</label>
             <input type="file" name="file" id="resume" accept=".pdf">
             <button type="submit">Submit</button>

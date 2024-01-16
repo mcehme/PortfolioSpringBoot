@@ -18,6 +18,7 @@ public class EmailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("no-reply@michaelehme.com");
         message.setTo(email);
+        message.setReplyTo(simpleEmail.from());
         message.setSubject(simpleEmail.subject());
         message.setText(simpleEmail.text());
         emailSender.send(message);
