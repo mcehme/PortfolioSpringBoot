@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Initial Commit (Squashed)">
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Adding Resume Downloader">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/PortfolioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/PortfolioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/components/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/components/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/repositories/ResumeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/repositories/ResumeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/professional_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/professional_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,23 +40,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="PortfolioSpringBoot" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PortfolioSpringBoot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PortfolioSpringBoot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="PortfolioSpringBoot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -67,6 +53,7 @@
         <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -76,6 +63,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2b1IYJV768tzZDEoqBxHL3vF1mS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -83,10 +73,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.PortfolioSpringBoot [bootRun].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/mcehm/IdeaProjects/Portfolio/PortfolioSpringBoot/src/main/resources/templates"
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mcehm/IdeaProjects/Portfolio/PortfolioSpringBoot"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -95,6 +90,7 @@
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot\src\main\resources\static\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot\src\main\resources\static" />
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot" />
     </key>
   </component>
@@ -130,6 +126,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="PortfolioSpringBoot [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -151,6 +148,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <list>
@@ -163,6 +161,13 @@
         <item itemvalue="Gradle.PortfolioSpringBoot [build]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -187,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705420417923</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding Resume Downloader">
+      <created>1705430839720</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705430839720</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit (Squashed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit (Squashed)" />
+    <MESSAGE value="Adding Resume Downloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Resume Downloader" />
   </component>
 </project>

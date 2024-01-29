@@ -1,19 +1,18 @@
 const fetcher = async (event) => {
     const form = event.target
-    const loader = document.querySelector('#loading-'+form.id)
-    const defaultDisplay = form.style.display
-    loader.hidden=false
-    form.style.display="none"
-
+    const button = form.querySelector('button[type="submit"]')
+    const text = button.textContent
+    button.disabled = true
+    button.textContent="Loading..."
     try {
         const response = await fetch(form.action, {
             method: form.method,
             body: form.method == 'post' ? new FormData(form): null,
             });
         console.log(await response.ok);
-        loader.hidden = await true
-        form.style.display=await defaultDisplay
+        button.textContent = await text
         await form.reset()
+        button.disabled = await false
         if (await !response.ok) {
             alert("Invalid inputs. Please try again.")
         }
@@ -33,7 +32,7 @@ const downloader = (event) => {
 }
 
 document.addEventListener('submit', (event) => {
-    if(event.target.className=='download'){
+    if(event.target.classList.contains('download')){
         downloader(event)
         return
     }

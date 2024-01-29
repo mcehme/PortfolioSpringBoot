@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
@@ -29,7 +28,7 @@ public class PortfolioController {
     public String index(Model model) {
         return "index";
     }
-    @RequestMapping(value="/emailService", method= RequestMethod.POST)
+    @PostMapping(value="/emailService")
     @ResponseBody
     public ResponseEntity<String> emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
         try {
