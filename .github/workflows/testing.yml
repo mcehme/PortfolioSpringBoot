@@ -16,6 +16,8 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: portfolio_web_site
+  ECR_REGISTRY: 452350997852.dkr.ecr.us-east-2.amazonaws.com
+  IMAGE_TAG: latest
   ECS_SERVICE: TBD
   ECS_CLUSTER: TBD
   ECS_TASK_DEFINITION: TBD
@@ -62,13 +64,9 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build docker image with Gradle Wrapper
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
       run: ./gradlew bootBuildImage
     - name: Push image to aws ecr
-      run: echo "docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      run: docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
