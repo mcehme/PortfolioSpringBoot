@@ -64,7 +64,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: docker login
-      run: aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_REGISTRY
+      run: aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
 
 
     - name: Build docker image with Gradle Wrapper
