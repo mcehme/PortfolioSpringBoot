@@ -61,12 +61,14 @@ jobs:
 
     - name: Login to Amazon ECR
       id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: docker login
       run: aws ecr get-login-password | docker login --username AWS --password-stdin $ECR_REGISTRY
 
 
     - name: Build docker image with Gradle Wrapper
-      run: ./gradlew bootBuildImage\
-
+      run: ./gradlew bootBuildImage
     - name: Push image to aws ecr
       run: docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
