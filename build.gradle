@@ -11,10 +11,6 @@ sourceCompatibility = '17'
 bootBuildImage {
     createdDate = "now"
     imageName="mcehme/portfoliopage"
-    docker {
-        builderRegistry {
-        }
-    }
 }
 repositories {
     mavenCentral()
