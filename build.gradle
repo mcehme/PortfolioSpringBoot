@@ -10,14 +10,7 @@ sourceCompatibility = '17'
 
 bootBuildImage {
     createdDate = "now"
-    imageName="mcehme/portfoliopage"
-    docker {
-        builderRegistry {
-            url = "452350997852.dkr.ecr.us-east-2.amazonaws.com/portfolio_web_site"
-            username = System.getenv("AWS_ACCESS_KEY_ID")
-            password = System.getenv("AWS_SECRET_ACCESS_KEY")
-        }
-    }
+    imageName="452350997852.dkr.ecr.us-east-2.amazonaws.com/portfolio_web_site"
 }
 repositories {
     mavenCentral()

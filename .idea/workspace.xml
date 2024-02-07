@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Fixing typo">
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Adding credentials to buildpack">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
@@ -191,10 +191,16 @@
     </configuration>
     <configuration name="PortfolioSpringBoot [bootBuildImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="AWS_ACCESS_KEY_ID" value="AKIAWSURYOVOKO7HE6UU" />
+            <entry key="AWS_SECRET_ACCESS_KEY" value="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" />
+          </map>
+        </option>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--scan" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -446,7 +452,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707321681410</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Adding credentials to buildpack">
+      <option name="closed" value="true" />
+      <created>1707322198449</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707322198449</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -468,7 +482,8 @@
     <MESSAGE value="giving gradlew run permission" />
     <MESSAGE value="Building docker file on push" />
     <MESSAGE value="Fixing typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing typo" />
+    <MESSAGE value="Adding credentials to buildpack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding credentials to buildpack" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
