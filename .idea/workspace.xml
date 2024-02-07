@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Switching to responsive">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ehme/michael/DTO/ResumeTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ehme/michael/PortfolioControllerTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ehme/michael/components/EmailServiceTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ehme/michael/records/SimpleEmailTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ehme/michael/records/SimpleFileTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Adding tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/PortfolioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/PortfolioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/components/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/components/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ehme/michael/records/SimpleFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ehme/michael/records/SimpleFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +29,53 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="portfoliospringboot" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -83,42 +113,46 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Gradle.EmailServiceTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EmailServiceTests.testSendEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testAdmin.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testAdminWithAuth.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testDownloadResume.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testEmailService.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testIndex.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioControllerTest.testUploadResume.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioSpringBoot [:PortfolioApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioSpringBoot [bootBuildImage] (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioSpringBoot [bootBuildImage].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioSpringBoot [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PortfolioSpringBoot [bootRun].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ResumeTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ResumeTests.testResumeContentNotNull.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ResumeTests.testResumeIdDefined.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleEmailTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SimpleFileTests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mcehm/IdeaProjects/KSU/rednutrition&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Gradle.EmailServiceTests.executor": "Run",
+    "Gradle.EmailServiceTests.testSendEmail.executor": "Run",
+    "Gradle.PortfolioControllerTest.executor": "Run",
+    "Gradle.PortfolioControllerTest.test.executor": "Run",
+    "Gradle.PortfolioControllerTest.testAdmin.executor": "Run",
+    "Gradle.PortfolioControllerTest.testAdminWithAuth.executor": "Run",
+    "Gradle.PortfolioControllerTest.testDownloadResume.executor": "Run",
+    "Gradle.PortfolioControllerTest.testEmailService.executor": "Run",
+    "Gradle.PortfolioControllerTest.testIndex.executor": "Run",
+    "Gradle.PortfolioControllerTest.testUploadResume.executor": "Run",
+    "Gradle.PortfolioControllerTests.testUploadResume.executor": "Run",
+    "Gradle.PortfolioSpringBoot [:PortfolioApplication.main()].executor": "Run",
+    "Gradle.PortfolioSpringBoot [bootBuildImage] (1).executor": "Run",
+    "Gradle.PortfolioSpringBoot [bootBuildImage].executor": "Run",
+    "Gradle.PortfolioSpringBoot [bootJar].executor": "Run",
+    "Gradle.PortfolioSpringBoot [bootRun].executor": "Run",
+    "Gradle.PortfolioSpringBoot [bootTestRun].executor": "Run",
+    "Gradle.PortfolioSpringBoot [testClasses].executor": "Run",
+    "Gradle.PortfolioSpringBoot [test].executor": "Run",
+    "Gradle.ResumeTests.executor": "Run",
+    "Gradle.ResumeTests.testResumeContentNotNull.executor": "Run",
+    "Gradle.ResumeTests.testResumeIdDefined.executor": "Run",
+    "Gradle.SimpleEmailTests.executor": "Run",
+    "Gradle.SimpleFileTests.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mcehm/IdeaProjects/KSU/rednutrition",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot\src\main\resources\templates" />
@@ -129,7 +163,7 @@
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PortfolioSpringBoot [bootRun]">
+  <component name="RunManager" selected="Gradle.PortfolioSpringBoot [test]">
     <configuration name="PortfolioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ehme.michael.PortfolioApplication" />
       <module name="portfoliospringboot.main" />
@@ -143,7 +177,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailServiceTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PortfolioControllerTests.testUploadResume" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -156,79 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.ehme.michael.components.EmailServiceTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="EmailServiceTests.testSendEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ehme.michael.components.EmailServiceTests.testSendEmail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PortfolioControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ehme.michael.controller.PortfolioControllerTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PortfolioControllerTest.testDownloadResume" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.ehme.michael.controller.PortfolioControllerTest.testDownloadResume&quot;" />
+            <option value="&quot;com.ehme.michael.PortfolioControllerTests.testUploadResume&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -273,21 +235,87 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="PortfolioSpringBoot [bootTestRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootTestRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PortfolioSpringBoot [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testClasses" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PortfolioSpringBoot [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.PortfolioApplication" />
       <item itemvalue="Gradle.PortfolioSpringBoot [bootRun]" />
-      <item itemvalue="Gradle.EmailServiceTests" />
-      <item itemvalue="Gradle.EmailServiceTests.testSendEmail" />
-      <item itemvalue="Gradle.PortfolioControllerTest.testDownloadResume" />
-      <item itemvalue="Gradle.PortfolioControllerTest" />
+      <item itemvalue="Gradle.PortfolioControllerTests.testUploadResume" />
+      <item itemvalue="Gradle.PortfolioSpringBoot [bootTestRun]" />
+      <item itemvalue="Gradle.PortfolioSpringBoot [testClasses]" />
+      <item itemvalue="Gradle.PortfolioSpringBoot [test]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PortfolioSpringBoot [test]" />
+        <item itemvalue="Gradle.PortfolioSpringBoot [bootTestRun]" />
+        <item itemvalue="Gradle.PortfolioSpringBoot [testClasses]" />
+        <item itemvalue="Gradle.PortfolioControllerTests.testUploadResume" />
         <item itemvalue="Application.PortfolioApplication" />
-        <item itemvalue="Gradle.EmailServiceTests.testSendEmail" />
-        <item itemvalue="Gradle.EmailServiceTests" />
-        <item itemvalue="Gradle.PortfolioControllerTest" />
-        <item itemvalue="Gradle.PortfolioControllerTest.testDownloadResume" />
       </list>
     </recent_temporary>
   </component>
@@ -328,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705430839720</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding tests">
+      <option name="closed" value="true" />
+      <created>1707314232129</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314232129</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,7 +381,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit (Squashed)" />
     <MESSAGE value="Adding Resume Downloader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Resume Downloader" />
+    <MESSAGE value="Adding tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding tests" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
