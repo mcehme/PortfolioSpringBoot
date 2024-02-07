@@ -63,8 +63,8 @@ jobs:
 
     - name: Build docker image with Gradle Wrapper
       env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
+        ECR_REGISTRY: 452350997852.dkr.ecr.us-east-2.amazonaws.com
+        IMAGE_TAG: latest
       run: ./gradlew bootBuildImage
     - name: Push image to aws ecr
       run: echo "docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
