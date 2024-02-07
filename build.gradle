@@ -13,6 +13,7 @@ bootBuildImage {
     imageName="mcehme/portfoliopage"
     docker {
         builderRegistry {
+            url = "452350997852.dkr.ecr.us-east-2.amazonaws.com/portfolio_web_site"
         }
     }
 }

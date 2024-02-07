@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Tweaking website content" />
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Building docker file on push">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/testing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/testing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,20 +165,7 @@
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PortfolioSpringBoot [test]">
-    <configuration name="PortfolioApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ehme.michael.PortfolioApplication" />
-      <module name="portfoliospringboot.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ehme.michael.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.PortfolioSpringBoot [bootBuildImage]">
     <configuration name="PortfolioControllerTests.testUploadResume" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -197,6 +188,28 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="PortfolioSpringBoot [bootBuildImage]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootBuildImage" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="PortfolioSpringBoot [bootRun]" type="GradleRunConfiguration" factoryName="Gradle">
@@ -300,8 +313,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.PortfolioApplication" />
       <item itemvalue="Gradle.PortfolioSpringBoot [bootRun]" />
+      <item itemvalue="Gradle.PortfolioSpringBoot [bootBuildImage]" />
       <item itemvalue="Gradle.PortfolioControllerTests.testUploadResume" />
       <item itemvalue="Gradle.PortfolioSpringBoot [bootTestRun]" />
       <item itemvalue="Gradle.PortfolioSpringBoot [testClasses]" />
@@ -309,11 +322,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PortfolioSpringBoot [bootBuildImage]" />
         <item itemvalue="Gradle.PortfolioSpringBoot [test]" />
         <item itemvalue="Gradle.PortfolioSpringBoot [bootTestRun]" />
         <item itemvalue="Gradle.PortfolioSpringBoot [testClasses]" />
         <item itemvalue="Gradle.PortfolioControllerTests.testUploadResume" />
-        <item itemvalue="Application.PortfolioApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +383,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707315318916</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="giving gradlew run permission">
+      <option name="closed" value="true" />
+      <created>1707315597325</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707315597325</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Building docker file on push">
+      <option name="closed" value="true" />
+      <created>1707319692418</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707319692419</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +418,9 @@
     <MESSAGE value="Adding Resume Downloader" />
     <MESSAGE value="Adding tests" />
     <MESSAGE value="Tweaking website content" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tweaking website content" />
+    <MESSAGE value="giving gradlew run permission" />
+    <MESSAGE value="Building docker file on push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Building docker file on push" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
