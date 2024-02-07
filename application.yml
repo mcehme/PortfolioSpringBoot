@@ -2,7 +2,7 @@ spring:
   mail:
     host: 'smtp.gmail.com'
     port: 587
-    username: ${GMAIL_USERNAME}
+    username: ${GMAIL_USER}
     password: ${GMAIL_PASSWORD}
     properties:
       mail:
@@ -12,7 +12,7 @@ spring:
             enable: true
   datasource:
     url: ${DB_URL}
-    username: ${DB_USERNAME}
+    username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:
     hibernate:
@@ -20,5 +20,5 @@ spring:
 personal:
   email: ${PERSONAL_EMAIL}
   admin:
-    user: ${ADMIN_USER}
+    username: ${ADMIN_USER}
     password: ${ADMIN_PASSWORD}

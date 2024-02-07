@@ -44,7 +44,7 @@ public class PortfolioController {
         return "admin";
     }
 
-    @RequestMapping(value="/uploadResume", method= RequestMethod.POST, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @ResponseBody
     public ResponseEntity<String> uploadResume(Model model, @ModelAttribute SimpleFile file) throws IOException {
         Resume resume = new Resume();

@@ -9,11 +9,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class EmailService {
-    @Autowired
-    private JavaMailSender emailSender;
+    private final JavaMailSender javaMailSender;
 
     @Value("${personal.email}")
     private String email;
+
+    @Autowired
+    public EmailService(JavaMailSender javaMailSender){
+        this.javaMailSender = javaMailSender;
+    }
+
     public void sendSimpleMessage(SimpleEmail simpleEmail) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("no-reply@michaelehme.com");
@@ -21,14 +26,14 @@ public class EmailService {
         message.setReplyTo(simpleEmail.from());
         message.setSubject(simpleEmail.subject());
         message.setText(simpleEmail.text());
-        emailSender.send(message);
+        javaMailSender.send(message);
 
         message = new SimpleMailMessage();
         message.setFrom("no-reply@michaelehme.com");
         message.setTo(simpleEmail.from());
         message.setSubject("Confirmation");
         message.setText("Thank you for your email");
-        emailSender.send(message);
+        javaMailSender.send(message);
     }
 
 

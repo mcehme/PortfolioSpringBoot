@@ -19,7 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
-    @Value("${personal.admin.user}")
+    @Value("${personal.admin.username}")
     private String username;
 
     @Value("${personal.admin.password}")
@@ -29,7 +29,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(
-                (requests) -> requests.requestMatchers("/admin").authenticated()
+                (requests) -> requests.requestMatchers("/admin", "/uploadResume").authenticated()
                         .anyRequest().permitAll()
         ).formLogin(
                 Customizer.withDefaults()
