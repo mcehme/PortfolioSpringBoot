@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Adding credentials to buildpack">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Removing unnecessary lines in build.gradle" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -460,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707322198449</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Removing unnecessary lines in build.gradle">
+      <option name="closed" value="true" />
+      <created>1707323272296</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1707323272296</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +488,8 @@
     <MESSAGE value="Building docker file on push" />
     <MESSAGE value="Fixing typo" />
     <MESSAGE value="Adding credentials to buildpack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding credentials to buildpack" />
+    <MESSAGE value="Removing unnecessary lines in build.gradle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing unnecessary lines in build.gradle" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
