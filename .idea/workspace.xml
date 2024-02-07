@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Adding tests">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1da2cdd4-26df-4287-a54e-12a1dbbf9944" name="Changes" comment="Tweaking website content" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,46 +111,46 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Gradle.EmailServiceTests.executor": "Run",
-    "Gradle.EmailServiceTests.testSendEmail.executor": "Run",
-    "Gradle.PortfolioControllerTest.executor": "Run",
-    "Gradle.PortfolioControllerTest.test.executor": "Run",
-    "Gradle.PortfolioControllerTest.testAdmin.executor": "Run",
-    "Gradle.PortfolioControllerTest.testAdminWithAuth.executor": "Run",
-    "Gradle.PortfolioControllerTest.testDownloadResume.executor": "Run",
-    "Gradle.PortfolioControllerTest.testEmailService.executor": "Run",
-    "Gradle.PortfolioControllerTest.testIndex.executor": "Run",
-    "Gradle.PortfolioControllerTest.testUploadResume.executor": "Run",
-    "Gradle.PortfolioControllerTests.testUploadResume.executor": "Run",
-    "Gradle.PortfolioSpringBoot [:PortfolioApplication.main()].executor": "Run",
-    "Gradle.PortfolioSpringBoot [bootBuildImage] (1).executor": "Run",
-    "Gradle.PortfolioSpringBoot [bootBuildImage].executor": "Run",
-    "Gradle.PortfolioSpringBoot [bootJar].executor": "Run",
-    "Gradle.PortfolioSpringBoot [bootRun].executor": "Run",
-    "Gradle.PortfolioSpringBoot [bootTestRun].executor": "Run",
-    "Gradle.PortfolioSpringBoot [testClasses].executor": "Run",
-    "Gradle.PortfolioSpringBoot [test].executor": "Run",
-    "Gradle.ResumeTests.executor": "Run",
-    "Gradle.ResumeTests.testResumeContentNotNull.executor": "Run",
-    "Gradle.ResumeTests.testResumeIdDefined.executor": "Run",
-    "Gradle.SimpleEmailTests.executor": "Run",
-    "Gradle.SimpleFileTests.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mcehm/IdeaProjects/KSU/rednutrition",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Gradle.EmailServiceTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EmailServiceTests.testSendEmail.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testAdminWithAuth.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testDownloadResume.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testEmailService.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testIndex.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTest.testUploadResume.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioControllerTests.testUploadResume.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [:PortfolioApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [bootBuildImage] (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [bootBuildImage].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [bootTestRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [testClasses].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PortfolioSpringBoot [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ResumeTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ResumeTests.testResumeContentNotNull.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ResumeTests.testResumeIdDefined.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleEmailTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SimpleFileTests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mcehm/IdeaProjects/KSU/rednutrition&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mcehm\IdeaProjects\Portfolio\PortfolioSpringBoot\src\main\resources\templates" />
@@ -364,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707314232129</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tweaking website content">
+      <option name="closed" value="true" />
+      <created>1707315318916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707315318916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,7 +388,8 @@
     <MESSAGE value="Initial Commit (Squashed)" />
     <MESSAGE value="Adding Resume Downloader" />
     <MESSAGE value="Adding tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding tests" />
+    <MESSAGE value="Tweaking website content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweaking website content" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
