@@ -1,6 +1,6 @@
-#logging:
-#  level:
-#    root: DEBUG
+logging:
+  level:
+    root: TRACE
 spring:
   mail:
     host: 'smtp.gmail.com'
