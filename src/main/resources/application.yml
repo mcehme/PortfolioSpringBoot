@@ -1,8 +1,6 @@
 #logging:
 #  level:
 #    root: DEBUG
-server:
-  port: 80
 spring:
   mail:
     host: 'smtp.gmail.com'
