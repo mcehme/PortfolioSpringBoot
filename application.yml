@@ -14,7 +14,7 @@ spring:
           starttls:
             enable: true
   datasource:
-    url: 'test'
+    url: jdbc:postgresql://localhost:5432/portfolio
     username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:
