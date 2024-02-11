@@ -14,7 +14,7 @@ spring:
           starttls:
             enable: true
   datasource:
-    url: ${DB_URL}
+    url: 'test'
     username: ${DB_USER}
     password: ${DB_PASSWORD}
   jpa:
