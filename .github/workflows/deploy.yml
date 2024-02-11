@@ -20,7 +20,7 @@ env:
   IMAGE_TAG: latest
   ECS_SERVICE: My-Portfolio-Service
   ECS_CLUSTER: PortfolioCluster
-  ECS_TASK_DEFINITION: My-Portfolio-Task
+  ECS_TASK_DEFINITION: ./My-Portfolio-Task.json
   CONTAINER_NAME: springbootportfolio
 
 permissions:
