@@ -18,10 +18,10 @@ env:
   ECR_REPOSITORY: portfolio_web_site
   ECR_REGISTRY: 452350997852.dkr.ecr.us-east-2.amazonaws.com
   IMAGE_TAG: latest
-  ECS_SERVICE: TBD
-  ECS_CLUSTER: TBD
-  ECS_TASK_DEFINITION: TBD
-  CONTAINER_NAME: TBD
+  ECS_SERVICE: My-Portfolio-Service
+  ECS_CLUSTER: PortfolioCluster
+  ECS_TASK_DEFINITION: My-Portfolio-Task
+  CONTAINER_NAME: springbootportfolio
 
 permissions:
   contents: read
