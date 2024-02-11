@@ -35,18 +35,19 @@
        </div>
        <div id="this">
            <div class="md:flex md:justify-between md:items-center md:justify-center md:h-[32rem]">
-               <div class="py-10 px-20 max-sm:h-fit md:h-full bg-green-500 flex items-center justify-center overflow-hidden">
+               <div class="py-10 px-20 max-sm:h-fit md:h-full md:w-7/12 bg-green-500 flex items-center justify-center">
                    <h2 class="font-bold text-slate-200 text-2xl md:text-3xl lg:text-5xl">This website is powered by Spring Boot, Hibernate/JPA, and TailwindCSS</h2>
                </div>
-               <div class="py-10 px-10 bg-fuchsia-300 md:h-full md:flex md:items-center md:justify-center">
-                   <p>Java Spring Boot powers the backend of the website.</p>
-                   <ul>
+               <div class="py-10 px-10 bg-fuchsia-300 md:h-full md:flex md:items-center md:justify-center md:w-5/12">
+                   <ul class="list-disc">
                        <li>Spring Data (using JPA/Hibernate) for live document storage and retrieval</li>
                        <li>Spring Security for admin page</li>
                        <li>JUnit5, Mockito, and Spring Testing for Unit and Spring "Slice" testing</li>
                        <li>Spring email + gmail SMTP for contact form</li>
                        <li>TailwindCSS for stylesheets</li>
                        <li>Async Javascript for API interactions</li>
+                       <li>AWS ECR, ECS, ELB, and more used in hosting architecture</li>
+                       <li>GitHub Actions used to create full CI/CD pipeline</li>
                    </ul>
                </div>
            </div>
