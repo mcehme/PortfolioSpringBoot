@@ -24,10 +24,7 @@ public class PortfolioController {
 
     @Autowired
     ResumeRepository resumeRepository;
-    @GetMapping("/")
-    public String index(Model model) {
-        return "index";
-    }
+
     @PostMapping(value="/emailService")
     @ResponseBody
     public ResponseEntity<String> emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
@@ -38,10 +35,6 @@ public class PortfolioController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
-    }
-    @GetMapping("/admin")
-    public String admin(Model model) {
-        return "admin";
     }
 
     @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})

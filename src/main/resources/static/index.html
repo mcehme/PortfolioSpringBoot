@@ -1,42 +1,42 @@
 <!doctype html>
-<html xmlns:th="http://www.thymeleaf.org" class="scroll-smooth scroll-py-10">
+<html class="scroll-smooth scroll-py-10">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Michael Ehme</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-    <script type="text/javascript" th:src="@{/script.js}"></script>
+    <script type="text/javascript" src="/script.js"></script>
     <header class="sticky top-0">
         <nav id="navbar" class="flex flex-row justify-end gap-2 p-0.5 bg-slate-500">
             <a href="/#home" class=" rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Home</a>
-            <a  href="/#about" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">About</a>
-            <a  href="/#resume" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Resume</a>
-            <a  href="/#contact-me" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Contact Me</a>
+            <a href="/#about" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">About</a>
+            <a href="/#resume" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Resume</a>
+            <a href="/#contact-me" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Contact Me</a>
             <a  href="https://github.com/mcehme?tab=repositories" class="rounded-full p-0.5 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">GitHub</a>
         </nav>
     </header>
-   <main class="w-screen">
+   <main>
        <div id="home" class="bg-sky-700 flex flex-row items-center justify-around py-32">
            <h1 class="text-center text-slate-100 text-2xl md:text-5xl lg:text-8xl">Introducing Michael Ehme</h1>
-           <img  class="size-32 md:size-60 lg:size-80 object-cover rounded-full" th:src="@{/images/professional_1.jpg}"/>
+           <img  class="size-32 md:size-60 lg:size-80 object-cover rounded-full" src="/images/professional_1.jpg"/>
        </div>
        <div id="about" class="bg-slate-400 py-2 overflow-hidden">
            <div class="md:flex md:justify-around md:items-center">
-               <img class="size-32 md:size-60 lg:size-80 object-contain float-left" th:src="@{/images/ksu.png}"/>
+               <img class="size-32 md:size-60 lg:size-80 object-contain float-left" src="/images/ksu.png"/>
                <p class="md:w-5/12">Fullstack engineer graduating summa cum laude with a BS in Computer Science from Kennesaw State University.
                    Looking for a fullstack or backend role. Passions (and experience) include fullstack web development and AI.
                    Hobbies include practicing martial arts, driving my BMW Z4, and volunteering at my local church. </p>
-               <img class="size-40 md:size-60 lg:size-80 object-cover mx-auto md:mx-0" th:src="@{/images/sporty.jpg}"/>
+               <img class="size-40 md:size-60 lg:size-80 object-cover mx-auto md:mx-0" src="/images/sporty.jpg"/>
            </div>
        </div>
        <div id="this">
            <div class="md:flex md:justify-between md:items-center md:justify-center md:h-[32rem]">
-               <div class="py-10 px-20 max-sm:h-fit md:h-full md:w-7/12 bg-green-500 flex items-center justify-center">
-                   <h2 class="font-bold text-slate-200 text-2xl md:text-3xl lg:text-5xl">This website is powered by Spring Boot, Hibernate/JPA, and TailwindCSS</h2>
+               <div class="py-10 max-sm:h-fit md:h-full md:w-7/12 bg-green-500 flex items-center justify-center">
+                   <h2 class="font-bold px-20 text-slate-200 text-2xl md:text-3xl lg:text-5xl">This website is powered by Spring Boot, Hibernate/JPA, and TailwindCSS</h2>
                </div>
                <div class="py-10 px-10 bg-fuchsia-300 md:h-full md:flex md:items-center md:justify-center md:w-5/12">
                    <ul class="list-disc">
@@ -55,7 +55,7 @@
        <div id="resume">
            <div class="md:flex md:items-center md:justify-center p-5 bg-sky-300">
                <p class="font-bold w-fit mx-auto md:mx-2 overflow-hidden">Download my resume to learn more about me!</p>
-               <form th:action="@{/downloadResume/resume.pdf}" method="get" id="download-resume" class="download w-fit max-md:mx-auto">
+               <form action="/downloadResume/resume.pdf" method="get" id="download-resume" class="download w-fit max-md:mx-auto">
                    <button class="md:mx-2 p-2 bg-indigo-500 hover:bg-indigo-600 rounded-full ring ring-white" type="submit">Download</button>
                </form>
            </div>
@@ -64,7 +64,7 @@
        <div id="contact-me">
            <div class="bg-sky-300">
                <p class = "font-bold text-center">Feel free to contact me using the email form below to talk tech, business, or anything else :)</p>
-               <form class="grid grid-cols-12 grid-rows-9 justify-items-stretch items-center gap-x-5" th:action="@{/emailService}" method="post" id="email-service">
+               <form class="grid grid-cols-12 grid-rows-9 justify-items-stretch items-center gap-x-5" action="/emailService" method="post" id="email-service">
                    <label class="font-bold col-start-3 col-span-3 row-start-1 row-span-1 justify-self-end"for="from">Your Email</label>
                    <input class="border-4 border-black col-start-6 col-span-6 sm:col-span-4 md:col-span-3 row-start-1 row-span-1" type="email" id="from" name="from" placeholder="Your email here">
                    <label class="font-bold col-start-3 col-span-3 row-start-2 row-span-1 justify-self-end" for="subject">Subject</label>
