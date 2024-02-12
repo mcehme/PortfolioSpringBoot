@@ -6,6 +6,7 @@ import com.ehme.michael.records.SimpleEmail;
 import com.ehme.michael.records.SimpleFile;
 import com.ehme.michael.repositories.ResumeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
@@ -24,6 +25,16 @@ public class PortfolioController {
 
     @Autowired
     ResumeRepository resumeRepository;
+
+    @GetMapping("/")
+    public String index(Model model) {
+        return "forward:/index.html";
+    }
+
+    @GetMapping("/admin")
+    public String admin(Model model) {
+        return "forward:/admin.html";
+    }
 
     @PostMapping(value="/emailService")
     @ResponseBody
