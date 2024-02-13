@@ -30,8 +30,9 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(AbstractHttpConfigurer::disable).authorizeHttpRequests(
-                (requests) -> requests.requestMatchers("/admin", "/uploadResume").authenticated()
+        http.csrf((csrfConfigurer)-> csrfConfigurer.ignoringRequestMatchers("/emailService", "/downloadResume/**"))
+                .authorizeHttpRequests((requests) ->
+                        requests.requestMatchers("/admin", "/uploadResume").authenticated()
                         .anyRequest().permitAll()
         ).formLogin(
                 Customizer.withDefaults()

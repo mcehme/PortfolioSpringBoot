@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,8 +16,7 @@
     </div>
     <div>
         <div id="loading-upload-resume" class="loading" hidden></div>
-        <form action="/uploadResume" method="post" object=file enctype="multipart/form-data" id="upload-resume">
-            <input type="hidden" name="_csrf" value="${csrfToken}">
+        <form th:action="@{/uploadResume}" method="post" object=file enctype="multipart/form-data" id="upload-resume">
             <label for="resume">Upload Resume</label>
             <input type="file" name="file" id="resume" accept=".pdf">
             <button type="submit">Submit</button>

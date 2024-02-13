@@ -3,7 +3,7 @@ const fetcher = async (event) => {
     const button = form.querySelector('button[type="submit"]')
     const text = button.textContent
     button.disabled = true
-    button.textContent="Loading..."
+    button.textContent='Loading...'
     try {
         const response = await fetch(form.action, {
             method: form.method,

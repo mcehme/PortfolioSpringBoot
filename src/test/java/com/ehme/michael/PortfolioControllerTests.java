@@ -39,7 +39,7 @@ public class PortfolioControllerTests {
     public void testIndex() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("forward:/index.html"));
+                .andExpect(MockMvcResultMatchers.view().name("forward:index.html"));
     }
     @Test
     public void testEmailService() throws Exception {
@@ -62,7 +62,7 @@ public class PortfolioControllerTests {
         mockMvc.perform(MockMvcRequestBuilders.get("/admin")
                         .with(SecurityMockMvcRequestPostProcessors.user("admin").password("admin").roles("ADMIN")))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("forward:/admin.html"));
+                .andExpect(MockMvcResultMatchers.view().name("admin"));
     }
 
     @Test

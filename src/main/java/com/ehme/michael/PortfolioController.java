@@ -5,6 +5,8 @@ import com.ehme.michael.components.EmailService;
 import com.ehme.michael.records.SimpleEmail;
 import com.ehme.michael.records.SimpleFile;
 import com.ehme.michael.repositories.ResumeRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.core.io.ByteArrayResource;
@@ -27,15 +29,11 @@ public class PortfolioController {
     @Autowired
     ResumeRepository resumeRepository;
 
-    @GetMapping("/")
-    public String index(Model model) {
-        return "forward:/index.html";
-    }
+    Logger logger = LoggerFactory.getLogger(PortfolioController.class);
 
     @GetMapping("/admin")
     public String admin(Model model, CsrfToken csrfToken) {
-        model.addAttribute("_csrf", csrfToken);
-        return "forward:/admin.html";
+        return "admin";
     }
 
     @PostMapping(value="/emailService")
@@ -44,7 +42,7 @@ public class PortfolioController {
         try {
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
-            System.out.println(e);
+            logger.error(e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
