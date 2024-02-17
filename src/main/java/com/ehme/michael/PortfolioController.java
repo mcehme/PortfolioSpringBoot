@@ -18,8 +18,11 @@ import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
+import java.rmi.server.ExportException;
+import java.util.Optional;
 
 @Controller
 public class PortfolioController {
@@ -37,24 +40,24 @@ public class PortfolioController {
     }
 
     @PostMapping(value="/emailService")
-    @ResponseBody
-    public ResponseEntity<String> emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
+    public void emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
         try {
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
             logger.error(e.getMessage());
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid inputs");
         }
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    @ResponseBody
-    public ResponseEntity<String> uploadResume(Model model, @ModelAttribute SimpleFile file) throws IOException {
+    public void uploadResume(Model model, @ModelAttribute SimpleFile file) throws IOException {
+        if(file.file().getBytes().length == 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "File cannot be empty");
+        }
         Resume resume = new Resume();
         resume.setContent(file.file().getBytes());
+        resumeRepository.deleteAll();
         resumeRepository.save(resume);
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value="/downloadResume/resume.pdf", produces=MediaType.APPLICATION_PDF_VALUE)
