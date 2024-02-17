@@ -40,6 +40,7 @@ public class PortfolioController {
     }
 
     @PostMapping(value="/emailService")
+    @ResponseBody
     public void emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
         try {
             emailService.sendSimpleMessage(simpleEmail);
@@ -50,6 +51,7 @@ public class PortfolioController {
     }
 
     @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    @ResponseBody
     public void uploadResume(Model model, @ModelAttribute SimpleFile file) throws IOException {
         if(file.file().getBytes().length == 0) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "File cannot be empty");
