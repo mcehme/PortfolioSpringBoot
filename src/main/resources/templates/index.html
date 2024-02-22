@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="scroll-smooth scroll-py-10">
+<html class="scroll-smooth scroll-py-10" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -55,7 +55,7 @@
        <div id="resume">
            <div class="md:flex md:items-center md:justify-center p-5 bg-sky-300">
                <p class="font-bold w-fit mx-auto md:mx-2 overflow-hidden">Download my resume to learn more about me!</p>
-               <form action="/downloadResume/resume.pdf" method="get" id="download-resume" class="download w-fit max-md:mx-auto">
+               <form th:action="@{/downloadResume/resume.pdf}" method="get" id="download-resume" class="download w-fit max-md:mx-auto">
                    <button class="md:mx-2 p-2 bg-indigo-500 hover:bg-indigo-600 rounded-full ring ring-white" type="submit">Download</button>
                </form>
            </div>
@@ -64,7 +64,7 @@
        <div id="contact-me">
            <div class="bg-sky-300">
                <p class = "font-bold text-center">Feel free to contact me using the email form below to talk tech, business, or anything else :)</p>
-               <form class="grid grid-cols-12 grid-rows-9 justify-items-stretch items-center gap-x-5" action="/emailService" method="post" id="email-service">
+               <form class="grid grid-cols-12 grid-rows-9 justify-items-stretch items-center gap-x-5" th:action="@{/emailService}" method="post" id="email-service">
                    <label class="font-bold col-start-3 col-span-3 row-start-1 row-span-1 justify-self-end"for="from">Your Email</label>
                    <input class="border-4 border-black col-start-6 col-span-6 sm:col-span-4 md:col-span-3 row-start-1 row-span-1" type="email" id="from" name="from" placeholder="Your email here">
                    <label class="font-bold col-start-3 col-span-3 row-start-2 row-span-1 justify-self-end" for="subject">Subject</label>

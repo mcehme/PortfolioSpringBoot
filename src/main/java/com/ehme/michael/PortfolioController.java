@@ -34,8 +34,13 @@ public class PortfolioController {
 
     Logger logger = LoggerFactory.getLogger(PortfolioController.class);
 
+    @GetMapping("/")
+    public String index(Model model) {
+        return "index";
+    }
+
     @GetMapping("/admin")
-    public String admin(Model model, CsrfToken csrfToken) {
+    public String admin(Model model) {
         return "admin";
     }
 

@@ -39,7 +39,7 @@ public class PortfolioControllerTests {
     public void testIndex() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("forward:index.html"));
+                .andExpect(MockMvcResultMatchers.view().name("index"));
     }
     @Test
     public void testEmailService() throws Exception {
