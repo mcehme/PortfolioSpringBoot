@@ -10,6 +10,8 @@
 </head>
 <body>
     <script type="text/javascript" src="/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc99eMpAAAAAKigJpRGGitIMj6iGaJpu6-yP8Ot"></script>
+
     <header class="sticky top-0">
         <nav id="navbar" class="flex flex-row justify-end gap-2 p-0.5 bg-slate-500">
             <a href="/#home" class=" rounded-full px-1 py-2 md:p-1 text-xs md:text-base ring ring-white bg-cyan-500 hover:bg-cyan-700">Home</a>
@@ -55,7 +57,7 @@
        <div id="resume">
            <div class="md:flex md:items-center md:justify-center p-5 bg-sky-300">
                <p class="font-bold w-fit mx-auto md:mx-2 overflow-hidden">Download my resume to learn more about me!</p>
-               <form th:action="@{/downloadResume/resume.pdf}" method="get" id="download-resume" class="download w-fit max-md:mx-auto">
+               <form th:action="@{/downloadResume/resume.pdf}" method="post" id="Michael_Ehme_resume.pdf" class="download w-fit max-md:mx-auto">
                    <button class="md:mx-2 p-2 bg-indigo-500 hover:bg-indigo-600 rounded-full ring ring-white" type="submit">Download</button>
                </form>
            </div>

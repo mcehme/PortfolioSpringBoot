@@ -1,15 +1,24 @@
-const fetcher = async (event) => {
+const fetcher = async (event, token) => {
     const form = event.target
     const button = form.querySelector('button[type="submit"]')
     const text = button.textContent
+    const data = new FormData(form)
+    data.append("response", token)
+    data.append("action", "SUBMIT")
     button.disabled = true
     button.textContent='Loading...'
     try {
         const response = await fetch(form.action, {
             method: form.method,
-            body: form.method == 'post' ? new FormData(form): null,
+            body: form.method == 'post' ? data: null,
             });
         console.log(await response.ok);
+        const blob = await response.blob()
+        const filename = form.id
+        if (await blob) {
+            const url = window.URL.createObjectURL(await blob)
+            downloader(await url, filename)
+        }
         button.textContent = await text
         await form.reset()
         button.disabled = await false
@@ -22,20 +31,25 @@ const fetcher = async (event) => {
     }
 }
 
-const downloader = (event) => {
+const downloader = (url, filename) => {
     const a = document.createElement("a");
-    a.href = event.target.action
-    a.download = ''
+    a.href = url
+    a.download = filename
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
 }
 
 document.addEventListener('submit', (event) => {
-    if(event.target.classList.contains('download')){
-        downloader(event)
-        return
-    }
-    fetcher(event)
-    event.preventDefault()
-})
+        event.preventDefault()
+        onClick(event)
+    })
+
+
+const onClick = (e) => {
+    grecaptcha.ready(() => {
+        grecaptcha.execute('6Lc99eMpAAAAAKigJpRGGitIMj6iGaJpu6-yP8Ot', {action: 'SUBMIT'}).then((token) => {
+            fetcher(e, token)
+        })
+    })
+}

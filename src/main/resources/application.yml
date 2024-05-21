@@ -25,3 +25,7 @@ personal:
   admin:
     username: ${ADMIN_USER}
     password: ${ADMIN_PASSWORD}
+google.recaptcha.key:
+  site: ${SITE_KEY}
+  key: ${SECRET_KEY}
+  threshold: 0.5
