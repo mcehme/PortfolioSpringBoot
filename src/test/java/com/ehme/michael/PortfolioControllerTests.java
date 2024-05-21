@@ -1,16 +1,17 @@
 package com.ehme.michael;
 
 import com.ehme.michael.DTO.Resume;
+import com.ehme.michael.components.CaptchaService;
 import com.ehme.michael.components.EmailService;
 import com.ehme.michael.config.WebSecurityConfig;
 import com.ehme.michael.repositories.ResumeRepository;
-import org.hamcrest.core.StringContains;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
@@ -22,6 +23,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 @WebMvcTest
 @ContextConfiguration(classes={PortfolioController.class, WebSecurityConfig.class})
+@ComponentScan()
 public class PortfolioControllerTests {
     @Autowired
     private MockMvc mockMvc;
@@ -31,6 +33,9 @@ public class PortfolioControllerTests {
 
     @MockBean
     private ResumeRepository resumeRepository;
+
+    @MockBean
+    private CaptchaService captchaService;
 
     @Mock
     private Resume resume;
@@ -93,7 +98,12 @@ public class PortfolioControllerTests {
 
         Mockito.when(resumeRepository.findFirstByOrderByIdDesc()).thenReturn(resume);
         Mockito.when(resume.getContent()).thenReturn("resume".getBytes());
-        mockMvc.perform(MockMvcRequestBuilders.get("/downloadResume/resume.pdf"))
+        Mockito.doNothing().when(captchaService).validate(Mockito.isNotNull());
+        mockMvc.perform(MockMvcRequestBuilders.post("/downloadResume/resume.pdf")
+                        .with(SecurityMockMvcRequestPostProcessors.csrf())
+                        .param("response","garbage")
+                        .param("action", "garbage")
+                )
                 .andExpect(MockMvcResultMatchers.content().bytes("resume".getBytes()));
     }
 

@@ -4,10 +4,10 @@ import com.ehme.michael.config.CaptchaSettings;
 import com.ehme.michael.records.ReCaptchaToken;
 import com.ehme.michael.records.ReCaptchaResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-@Component
+@Service
 public class CaptchaService {
 
     RestClient restClient = RestClient.builder().baseUrl(VERIFY_URI).build();

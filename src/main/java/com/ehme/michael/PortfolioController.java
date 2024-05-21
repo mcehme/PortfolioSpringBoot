@@ -24,7 +24,7 @@ import java.io.IOException;
 @Controller
 public class PortfolioController {
     @Autowired
-    private EmailService emailService;
+    EmailService emailService;
 
     @Autowired
     ResumeRepository resumeRepository;
@@ -46,7 +46,7 @@ public class PortfolioController {
 
     @PostMapping(value="/emailService")
     @ResponseBody
-    public void emailService(Model model, @ModelAttribute SimpleEmail simpleEmail) {
+    public void email(Model model, @ModelAttribute SimpleEmail simpleEmail) {
         try {
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
