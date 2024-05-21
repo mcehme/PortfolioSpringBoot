@@ -42,7 +42,11 @@ const downloader = (url, filename) => {
 
 document.addEventListener('submit', (event) => {
         event.preventDefault()
-        onClick(event)
+        if (event.target.classlist.contains('admin')) {
+            fetcher(event, '')
+        } else {
+            onClick(event)
+        }
     })
 
 
