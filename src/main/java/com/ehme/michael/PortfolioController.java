@@ -46,7 +46,14 @@ public class PortfolioController {
 
     @PostMapping(value="/emailService")
     @ResponseBody
-    public void email(Model model, @ModelAttribute SimpleEmail simpleEmail) {
+    public void email(Model model, @ModelAttribute SimpleEmail simpleEmail, @ModelAttribute ReCaptchaToken reCaptchaToken) {
+        try {
+            captchaService.validate(reCaptchaToken);
+        } catch (Exception e) {
+            logger.info(e.getMessage());
+            return;
+        }
+
         try {
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
@@ -57,12 +64,7 @@ public class PortfolioController {
 
     @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     @ResponseBody
-    public void uploadResume(Model model, @ModelAttribute SimpleFile file, @ModelAttribute ReCaptchaToken reCaptchaToken) throws IOException {
-        try {
-            captchaService.validate(reCaptchaToken);
-        } catch (Exception e) {
-            return;
-        }
+    public void uploadResume(Model model, @ModelAttribute SimpleFile file) throws IOException {
         if(file.file().getBytes().length == 0) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "File cannot be empty");
         }

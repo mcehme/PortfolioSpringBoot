@@ -15,7 +15,7 @@ const fetcher = async (event, token) => {
         console.log(await response.ok);
         const blob = await response.blob()
         const filename = form.id
-        if (await blob) {
+        if (await blob.size) {
             const url = window.URL.createObjectURL(await blob)
             downloader(await url, filename)
         }
@@ -42,12 +42,8 @@ const downloader = (url, filename) => {
 
 document.addEventListener('submit', (event) => {
         event.preventDefault()
-        if (event.target.classlist.contains('admin')) {
-            fetcher(event, '')
-        } else {
-            onClick(event)
-        }
-    })
+        onClick(event)
+        })
 
 
 const onClick = (e) => {

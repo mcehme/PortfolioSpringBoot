@@ -28,4 +28,4 @@ personal:
 google.recaptcha.key:
   site: ${SITE_KEY}
   key: ${SECRET_KEY}
-  threshold: 0.5
+  threshold: 0.7
