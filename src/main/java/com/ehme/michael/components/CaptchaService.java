@@ -1,6 +1,5 @@
 package com.ehme.michael.components;
 
-import com.ehme.michael.PortfolioController;
 import com.ehme.michael.config.CaptchaSettings;
 import com.ehme.michael.records.ReCaptchaToken;
 import com.ehme.michael.records.ReCaptchaResponse;
@@ -29,7 +28,11 @@ public class CaptchaService {
                         .queryParam("response", reCaptchaToken.response())
                         .build()
         ).retrieve().body(ReCaptchaResponse.class);
-        if (reCaptchaResponse != null && reCaptchaResponse.success() && reCaptchaResponse.action().equals("SUBMIT") &&reCaptchaResponse.score() >= captchaSettings.getThreshold()) {
+        if (reCaptchaResponse != null
+                && reCaptchaResponse.success()
+                && reCaptchaResponse.action().equals("SUBMIT")
+                && reCaptchaResponse.score() >= captchaSettings.getThreshold()
+        ) {
             logger.info("reCaptcha passes with score: {}", reCaptchaResponse.score());
             return;
         }

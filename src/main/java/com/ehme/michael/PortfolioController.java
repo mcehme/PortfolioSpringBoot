@@ -13,13 +13,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Controller
 public class PortfolioController {
@@ -46,22 +49,25 @@ public class PortfolioController {
 
     @PostMapping(value="/emailService")
     @ResponseBody
-    public void email(Model model, @ModelAttribute SimpleEmail simpleEmail, @ModelAttribute ReCaptchaToken reCaptchaToken) {
+    public ResponseEntity<Void> email(Model model, @ModelAttribute SimpleEmail simpleEmail, @ModelAttribute ReCaptchaToken reCaptchaToken) {
         try {
             captchaService.validate(reCaptchaToken);
         } catch (Exception e) {
             logger.info("Email Blocked");
             logger.info("Email body: {}", simpleEmail.text());
             logger.info(e.getMessage());
-            return;
+            return ResponseEntity.badRequest().build();
         }
+
+        HttpStatusCode httpStatusCode = HttpStatus.OK;
 
         try {
             emailService.sendSimpleMessage(simpleEmail);
         } catch (Exception e) {
             logger.error(e.getMessage());
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid inputs");
+            httpStatusCode = HttpStatus.BAD_REQUEST;
         }
+        return ResponseEntity.status(httpStatusCode).build();
     }
 
     @PostMapping(value="/uploadResume", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
@@ -78,14 +84,20 @@ public class PortfolioController {
 
     @PostMapping (value="/downloadResume/resume.pdf", produces=MediaType.APPLICATION_PDF_VALUE)
     @ResponseBody
-    public Resource downloadResume(Model model, @ModelAttribute ReCaptchaToken reCaptchaToken) {
+    public ResponseEntity<Resource> downloadResume(Model model, @ModelAttribute ReCaptchaToken reCaptchaToken) {
+
         try {
             captchaService.validate(reCaptchaToken);
-            return new ByteArrayResource(resumeRepository.findFirstByOrderByIdDesc().getContent());
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+        Optional<Resource> resource = Optional.empty();
+        try {
+            resource = Optional.of(new ByteArrayResource(resumeRepository.findFirstByOrderByIdDesc().getContent()));
 
         } catch (Exception e) {
             logger.info(e.getMessage());
-            return null;
         }
+        return ResponseEntity.ok(resource.orElse(null));
     }
 }
