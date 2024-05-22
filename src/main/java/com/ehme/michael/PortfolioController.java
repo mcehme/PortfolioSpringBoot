@@ -50,6 +50,8 @@ public class PortfolioController {
         try {
             captchaService.validate(reCaptchaToken);
         } catch (Exception e) {
+            logger.info("Email Blocked");
+            logger.info("Email body: {}", simpleEmail.text());
             logger.info(e.getMessage());
             return;
         }
