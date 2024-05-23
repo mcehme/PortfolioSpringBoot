@@ -29,7 +29,7 @@ public class ReCaptchaService {
 
     public boolean validate(ReCaptchaToken reCaptchaToken) {
         ReCaptchaResponse reCaptchaResponse = restClient.post().uri(uriBuilder ->uriBuilder
-                        .queryParam("secret", "test")
+                        .queryParam("secret", reCaptchaSettings.getKey())
                         .queryParam("response", reCaptchaToken.response())
                         .build()
         ).retrieve().body(ReCaptchaResponse.class);
