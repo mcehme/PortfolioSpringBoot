@@ -33,8 +33,6 @@ public class ReCaptchaService {
                         .queryParam("response", reCaptchaToken.response())
                         .build()
         ).retrieve().body(ReCaptchaResponse.class);
-        System.out.println(reCaptchaSettings.getKey());
-        System.out.println(reCaptchaSettings.getSite());
         return reCaptchaResponse != null
                 && reCaptchaResponse.success()
                 && reCaptchaResponse.action().equals("SUBMIT")

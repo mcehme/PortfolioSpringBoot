@@ -29,7 +29,7 @@ permissions:
 jobs:
   deploy:
 
-    runs-on: windows-latest
+    runs-on: macos-latest
     environment: production
     permissions:
       contents: read
