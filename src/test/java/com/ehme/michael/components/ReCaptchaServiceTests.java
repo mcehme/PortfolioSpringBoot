@@ -50,8 +50,8 @@ public class ReCaptchaServiceTests {
         String json = new ObjectMapper().writeValueAsString(response);
 
         mockRestServiceServer.expect(MockRestRequestMatchers.requestTo(Matchers.containsStringIgnoringCase(VERIFY_URI))).andExpect(MockRestRequestMatchers.method(HttpMethod.POST)).andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
-        ReCaptchaToken reCaptchaToken = new ReCaptchaToken("","");
-        boolean result = reCaptchaService.validate(null);
+        ReCaptchaToken reCaptchaToken = new ReCaptchaToken("garbage","garbage");
+        boolean result = reCaptchaService.validate(reCaptchaToken);
         Assertions.assertTrue(true);
     }
 
