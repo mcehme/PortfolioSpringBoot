@@ -51,6 +51,7 @@ public class ReCaptchaServiceTests {
 
         mockRestServiceServer.expect(MockRestRequestMatchers.requestTo(Matchers.containsStringIgnoringCase(VERIFY_URI))).andExpect(MockRestRequestMatchers.method(HttpMethod.POST)).andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
         boolean result = reCaptchaService.validate(new ReCaptchaToken("",""));
+        System.out.println(result);
         Assertions.assertTrue(result);
     }
 
@@ -61,6 +62,7 @@ public class ReCaptchaServiceTests {
 
         mockRestServiceServer.expect(MockRestRequestMatchers.requestTo(Matchers.containsStringIgnoringCase(VERIFY_URI))).andExpect(MockRestRequestMatchers.method(HttpMethod.POST)).andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
         boolean result = reCaptchaService.validate(new ReCaptchaToken("",""));
+        System.out.println(result);
         Assertions.assertFalse(result);
     }
 
@@ -71,6 +73,7 @@ public class ReCaptchaServiceTests {
 
         mockRestServiceServer.expect(MockRestRequestMatchers.requestTo(Matchers.containsStringIgnoringCase(VERIFY_URI))).andExpect(MockRestRequestMatchers.method(HttpMethod.POST)).andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
         boolean result = reCaptchaService.validate(new ReCaptchaToken("",""));
+        System.out.println(result);
         Assertions.assertFalse(result);
     }
 
