@@ -29,7 +29,7 @@ permissions:
 jobs:
   deploy:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     environment: production
     permissions:
       contents: read
@@ -49,9 +49,13 @@ jobs:
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
+      env:
+        SECRET_KEY: ${{secrets.SECRET_KEY}}
 
     - name: Test with Gradle Wrapper
       run: ./gradlew test
+      env:
+        SECRET_KEY: ${{secrets.SECRET_KEY}}
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
