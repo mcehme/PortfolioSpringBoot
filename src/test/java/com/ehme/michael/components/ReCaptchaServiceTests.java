@@ -50,7 +50,7 @@ public class ReCaptchaServiceTests {
         String json = new ObjectMapper().writeValueAsString(response);
 
         mockRestServiceServer.expect(MockRestRequestMatchers.requestTo(Matchers.containsStringIgnoringCase(VERIFY_URI))).andExpect(MockRestRequestMatchers.method(HttpMethod.POST)).andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
-        boolean result = reCaptchaService.validate(new ReCaptchaToken("abcdefg","abcdefg"));
+        boolean result = reCaptchaService.validate(new ReCaptchaToken("",""));
         Assertions.assertTrue(result);
     }
 
