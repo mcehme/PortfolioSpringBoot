@@ -29,15 +29,14 @@ public class ReCaptchaService {
 
     public boolean validate(ReCaptchaToken reCaptchaToken) {
         ReCaptchaResponse reCaptchaResponse = restClient.post().uri(uriBuilder ->uriBuilder
-                        .queryParam("secret", reCaptchaSettings.getKey())
+                        .queryParam("secret", "test")
                         .queryParam("response", reCaptchaToken.response())
                         .build()
         ).retrieve().body(ReCaptchaResponse.class);
-        return true;
-//        return reCaptchaResponse != null
-//                && reCaptchaResponse.success()
-//                && reCaptchaResponse.action().equals("SUBMIT")
-//                && reCaptchaResponse.score() >= reCaptchaSettings.getThreshold();
+        return reCaptchaResponse != null
+                && reCaptchaResponse.success()
+                && reCaptchaResponse.action().equals("SUBMIT")
+                && reCaptchaResponse.score() >= reCaptchaSettings.getThreshold();
 
     }
 
