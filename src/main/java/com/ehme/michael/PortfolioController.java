@@ -1,7 +1,7 @@
 package com.ehme.michael;
 
 import com.ehme.michael.DTO.Resume;
-import com.ehme.michael.components.CaptchaService;
+import com.ehme.michael.components.ReCaptchaService;
 import com.ehme.michael.components.EmailService;
 import com.ehme.michael.records.ReCaptchaToken;
 import com.ehme.michael.records.SimpleEmail;
@@ -33,7 +33,7 @@ public class PortfolioController {
     ResumeRepository resumeRepository;
 
     @Autowired
-    CaptchaService captchaService;
+    ReCaptchaService reCaptchaService;
 
     Logger logger = LoggerFactory.getLogger(PortfolioController.class);
 
@@ -50,12 +50,7 @@ public class PortfolioController {
     @PostMapping(value="/emailService")
     @ResponseBody
     public ResponseEntity<Void> email(Model model, @ModelAttribute SimpleEmail simpleEmail, @ModelAttribute ReCaptchaToken reCaptchaToken) {
-        try {
-            captchaService.validate(reCaptchaToken);
-        } catch (Exception e) {
-            logger.info("Email Blocked");
-            logger.info("Email body: {}", simpleEmail.text());
-            logger.info(e.getMessage());
+        if (!reCaptchaService.validate(reCaptchaToken)) {
             return ResponseEntity.badRequest().build();
         }
 
@@ -86,11 +81,10 @@ public class PortfolioController {
     @ResponseBody
     public ResponseEntity<Resource> downloadResume(Model model, @ModelAttribute ReCaptchaToken reCaptchaToken) {
 
-        try {
-            captchaService.validate(reCaptchaToken);
-        } catch (Exception e) {
+        if (!reCaptchaService.validate(reCaptchaToken)) {
             return ResponseEntity.badRequest().build();
         }
+
         Optional<Resource> resource = Optional.empty();
         try {
             resource = Optional.of(new ByteArrayResource(resumeRepository.findFirstByOrderByIdDesc().getContent()));

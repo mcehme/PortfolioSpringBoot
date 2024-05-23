@@ -1,7 +1,7 @@
 package com.ehme.michael;
 
 import com.ehme.michael.DTO.Resume;
-import com.ehme.michael.components.CaptchaService;
+import com.ehme.michael.components.ReCaptchaService;
 import com.ehme.michael.components.EmailService;
 import com.ehme.michael.config.WebSecurityConfig;
 import com.ehme.michael.repositories.ResumeRepository;
@@ -35,7 +35,7 @@ public class PortfolioControllerTests {
     private ResumeRepository resumeRepository;
 
     @MockBean
-    private CaptchaService captchaService;
+    private ReCaptchaService reCaptchaService;
 
     @Mock
     private Resume resume;
@@ -48,6 +48,7 @@ public class PortfolioControllerTests {
     }
     @Test
     public void testEmailService() throws Exception {
+        Mockito.when(reCaptchaService.validate(Mockito.any())).thenReturn(true);
         mockMvc.perform(MockMvcRequestBuilders.post("/emailService")
                         .with(SecurityMockMvcRequestPostProcessors.csrf())
                         .param("from", "FROM")
@@ -98,7 +99,7 @@ public class PortfolioControllerTests {
 
         Mockito.when(resumeRepository.findFirstByOrderByIdDesc()).thenReturn(resume);
         Mockito.when(resume.getContent()).thenReturn("resume".getBytes());
-        Mockito.doNothing().when(captchaService).validate(Mockito.isNotNull());
+        Mockito.when(reCaptchaService.validate(Mockito.any())).thenReturn(true);
         mockMvc.perform(MockMvcRequestBuilders.post("/downloadResume/resume.pdf")
                         .with(SecurityMockMvcRequestPostProcessors.csrf())
                         .param("response","garbage")

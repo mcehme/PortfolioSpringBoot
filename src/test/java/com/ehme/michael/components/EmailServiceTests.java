@@ -1,24 +1,20 @@
 package com.ehme.michael.components;
 
 import com.ehme.michael.records.SimpleEmail;
-import jakarta.mail.internet.MimeMessage;
-import net.bytebuddy.asm.Advice;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class EmailServiceTests {
 
@@ -46,8 +42,7 @@ public class EmailServiceTests {
         List<SimpleMailMessage> actualMessages = captor.getAllValues();
         List<SimpleMailMessage> expectedMessages = constructSimpleMessages(simpleEmail);
 
-        assertThat(actualMessages).isEqualTo(expectedMessages);
-
+        Assertions.assertEquals(actualMessages, expectedMessages);
     }
 
     private List<SimpleMailMessage> constructSimpleMessages(SimpleEmail simpleEmail) {
