@@ -20,11 +20,13 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+  security.oauth2.client.registration.github:
+    clientId: ${GH_CLIENT_ID}
+    clientSecret: ${GH_CLIENT_SECRET}
 personal:
   email: ${PERSONAL_EMAIL}
   admin:
     username: ${ADMIN_USER}
-    password: ${ADMIN_PASSWORD}
 google.recaptcha.key:
   site: ${SITE_KEY}
   key: ${SECRET_KEY}
