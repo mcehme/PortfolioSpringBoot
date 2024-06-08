@@ -72,6 +72,14 @@ public class PortfolioControllerTests {
     }
 
     @Test
+    public void testAdminWithAuthFailing() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/admin")
+                        .with(SecurityMockMvcRequestPostProcessors.user("admin").password("admin").roles("USER")))
+                .andExpect(MockMvcResultMatchers.status().is4xxClientError());
+
+    }
+
+    @Test
     public void testUploadResume() throws Exception {
         MockMultipartFile mockMultipartFile = new MockMultipartFile("file", "resume.pdf", MediaType.APPLICATION_PDF_VALUE, "resume".getBytes());
         mockMvc.perform(MockMvcRequestBuilders.

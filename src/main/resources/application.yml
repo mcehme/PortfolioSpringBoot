@@ -26,7 +26,8 @@ spring:
 personal:
   email: ${PERSONAL_EMAIL}
   admin:
-    username: ${ADMIN_USER}
+    usernames:
+      github: ${GH_ADMIN_USER}
 google.recaptcha.key:
   site: ${SITE_KEY}
   key: ${SECRET_KEY}
