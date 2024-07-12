@@ -12,17 +12,17 @@ const fetcher = async (event, token) => {
             method: form.method,
             body: form.method == 'post' ? data: null,
             });
-        console.log(await response.ok);
+        console.log(response.ok);
         const blob = await response.blob()
         const filename = form.id
-        if (await blob.size) {
-            const url = window.URL.createObjectURL(await blob)
-            downloader(await url, filename)
+        if (blob.size) {
+            const url = window.URL.createObjectURL(blob)
+            downloader(url, filename)
         }
-        button.textContent = await text
-        await form.reset()
-        button.disabled = await false
-        if (await !response.ok) {
+        button.textContent = text
+        form.reset()
+        button.disabled = false
+        if (!response.ok) {
             alert("Invalid inputs. Please try again.")
         }
 
